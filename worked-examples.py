@@ -7,9 +7,11 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.13.6
+#       jupytext_version: 1.13.8
 #   kernelspec:
+#     display_name: Python [conda env:cf] *
 #     language: python
+#     name: conda-env-cf-py
 # ---
 
 # %% [markdown]
@@ -111,6 +113,10 @@ Msphm(R)
 # %%
 # matrix adjugate (this will fail in the unphysical case det(x)=0 )
 adj = lambda x: x.det()*(x.inv().T)
+
+# %%
+for thisM in [M,Msphm(R),Msnell(n1,n2),Msphr(n1,n2,R)]:
+    display(adj(thisM))
 
 # %% [markdown]
 # ## Coordinate transformations
