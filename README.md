@@ -1,8 +1,14 @@
 # arXiv-2205.09746-code
-Python code for "Beyond the ABCDs: A projective geometry treatment of paraxial ray tracing using homogeneous coordinates" by Ted Corcovilos, 2022
 
-Preprint available at [arXiv:2205.09746](http://arxiv.org/abs/2205.09746)
+## Supplemental Material: Example code
 
-The included `.py` file contains worked examples from the paper in python using the `sympy` symbolic algebra package.  I using `jupytext` to convert this to a Jupyter notebook for viewing.
+"Beyond the ABCDs: A projective geometry treatment of paraxial ray tracing using homogeneous coordinates"
+Theodore A. Corcovilos (c) 2023, accepted for publication in *American Journal of Physics* and also available at [arXiv:2205.09746](https://arxiv.org/abs/2205.09746).
 
-` jupytext --to ipynb worked-examples.py `
+All of the examples in the manuscript are worked here in [python](http://python.org) using the symbolic algebra library [_sympy_](http://www.sympy.org/).  The end section contains additional examples that were omitted from the final version of the paper.
+
+This python script is a [Jupyter notebook](http://jupyter.org/) in the "percent" archival notebook format, but it is best viewed by first converting into the Jupyter notebook standard format using [`jupytext`](https://jupytext.readthedocs.io).
+
+```
+jupytext --to ipynb worked-examples.py
+```
