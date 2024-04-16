@@ -7,7 +7,11 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.14.4
+#       jupytext_version: 1.16.1
+#   kernelspec:
+#     display_name: Python 3 (ipykernel)
+#     language: python
+#     name: python3
 # ---
 
 # %% [markdown]
@@ -24,7 +28,7 @@ All of the examples in the manuscript are worked here in [python](http://python.
 
 # %% [markdown]
 """
-This python script is a [Jupyter notebook](http://jupyter.org/) in the "percent" archival notebook format, but it is best viewed by first converting into the Jupyter notebook standard format using [`jupytext`](https://jupytext.readthedocs.io).
+This python script is a [Jupyter notebook](http://jupyter.org/) in the "percent" archival notebook format, but it is best viewed by first converting into the Jupyter notebook `.ipynb` standard format using [`jupytext`](https://jupytext.readthedocs.io).
 
 ```
 jupytext --to ipynb worked-examples.py
@@ -419,7 +423,7 @@ normalize(adj(M7p4b)*Matrix([[0],[-1],[0]]))
 
 # %% [markdown]
 # ### Folding mirrors
-# A common setup in a laser lab is a pair of plane mirrors arranged to route the beam in a Z shape.  This provides the necessary degrees of freedom to adjust both the pointing and lateral position of the beam, for example to pass the beam through two sequential pinholes.
+# A common setup in a laser lab is a pair of plane mirrors arranged to route the beam in a Z shape.  This provides the necessary degrees of freedom to adjust both the pointing and lateral position of the beam, for example, to pass the beam through two sequential pinholes.
 #
 # Here is our problem statement:
 # > A laser enters along the _x_-axis from the left.  We use two plane mirrors with their surfaces centered at coordinates $(1,0)$ and $(0,\sqrt{4/3})$ to steer the beam through a pair of pinholes located at coordinates $(1,\sqrt{3})$ and $(3,\sqrt{3})$.
@@ -456,6 +460,10 @@ FM2
 # %%
 # The combination is just a translation of the beam up by $\sqrt{3}/2$
 FM2*FM1
+
+# %%
+# simplify the expression above
+simplify(FM2*FM1)
 
 # %%
 # acting on the ray
@@ -527,7 +535,7 @@ solve([new_output_ray[1,0] - target_ray[1,0],new_output_ray[0,0] - target_ray[0,
 # %%
 R = 50
 d = 5
-n = Rational(3,2)
+n = Rational(3,2) # the fraction 3/2
 
 # %% [markdown]
 # The order of operators (from right to left) is
